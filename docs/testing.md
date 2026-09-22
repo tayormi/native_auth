@@ -36,3 +36,5 @@ Test on an enrolled device: success, a rejected scan followed by success, user c
 A successful simulator test verifies the bridge and OS callback handling. Physical-device checks are still needed for hardware behavior and biometric lockout.
 
 See [local verification](verification.md) for the tested environments and remaining device checks.
+
+After creating the GitHub repository and accepting the registry publishing agreement, `python3 tools/publish_release.py` uploads the prepared archives using the configured DartNative publish token. It records an accepted upload and prevents a blind retry.
