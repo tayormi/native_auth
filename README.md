@@ -65,6 +65,6 @@ One prompt can run at a time across the process. A second request returns `busy`
 
 This package authenticates the device user. It does not perform server sign-in, unlock a Keychain item, or authorize a cryptographic operation. Your app owns its unlocked state and must relock when appropriate, including after backgrounding.
 
-See the [example app](example/README.md), [API notes](docs/api-notes.md), and [testing guide](docs/testing.md).
+See the [example app](https://github.com/tayormi/native_auth/blob/main/example/README.md), [API notes](https://github.com/tayormi/native_auth/blob/main/docs/api-notes.md), and [testing guide](https://github.com/tayormi/native_auth/blob/main/docs/testing.md).
 
 MIT license.
