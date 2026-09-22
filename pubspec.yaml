@@ -1,0 +1,27 @@
+name: native_auth
+description: Native biometric authentication and device-passcode fallback for DartNative on iOS and Android.
+version: 0.1.0
+publish_to: https://dartpub.dev
+homepage: https://github.com/tayormi/native_auth
+repository: https://github.com/tayormi/native_auth
+issue_tracker: https://github.com/tayormi/native_auth/issues
+environment:
+  sdk: '>=3.9.0 <4.0.0'
+dependencies:
+  ffi: ^2.1.4
+dev_dependencies:
+  test: ^1.25.15
+  lints: ^5.1.1
+dartnative:
+  plugin:
+    platforms:
+      ios:
+        ffiPlugin: true
+      android:
+        package: dev.tayormi.native_auth
+        pluginClass: NativeAuthPlugin
+  registrant:
+    imports:
+      - package:native_auth/native_auth.dart
+    calls:
+      - NativeAuthBindings.loadSymbols();

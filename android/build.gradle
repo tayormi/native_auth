@@ -1,0 +1,22 @@
+group 'dev.tayormi.native_auth'
+version '0.1.0'
+buildscript {
+    repositories { google(); mavenCentral() }
+    dependencies { classpath 'com.android.tools.build:gradle:8.9.1' }
+}
+apply plugin: 'com.android.library'
+android {
+    namespace 'dev.tayormi.native_auth'
+    compileSdk 36
+    ndkVersion '28.2.13676358'
+    defaultConfig {
+        minSdk 30
+        consumerProguardFiles 'consumer-rules.pro'
+        externalNativeBuild { cmake { arguments '-DANDROID_STL=c++_static' } }
+    }
+    externalNativeBuild { cmake { path 'src/main/cpp/CMakeLists.txt' } }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}

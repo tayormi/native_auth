@@ -1,0 +1,15 @@
+name: native_auth_example
+description: System authentication prompts with native_auth.
+publish_to: none
+version: 0.1.0+1
+environment:
+  sdk: '>=3.12.0-192.0.dev <4.0.0'
+dependencies:
+  dartnative: ^1.0.0
+  dartnative_ios: ^1.0.0
+  dartnative_android: ^1.0.0
+  dartnative_path_provider: ^1.0.0
+  native_auth:
+    path: ../
+dev_dependencies:
+  lints: ^5.1.1

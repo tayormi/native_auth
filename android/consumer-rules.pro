@@ -1,0 +1,1 @@
+-keep class dev.tayormi.native_auth.NativeAuthPlugin { *; }

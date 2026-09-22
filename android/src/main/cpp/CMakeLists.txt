@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.18)
+project(native_auth LANGUAGES CXX)
+add_library(native_auth SHARED native_auth.cpp)
+target_compile_features(native_auth PRIVATE cxx_std_17)
+target_compile_options(native_auth PRIVATE -Wall -Wextra -Werror)
